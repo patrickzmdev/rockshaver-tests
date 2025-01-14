@@ -9,7 +9,8 @@ pipeline {
         stage('Testes no Backend') {
             steps {
               dir('api') {
-                sh 'npm ci'
+                sh 'npm install'
+                sh 'npx cypress open'
                 sh 'npx cypress run'
               }
             }
