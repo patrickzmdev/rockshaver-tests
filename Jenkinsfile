@@ -7,13 +7,15 @@ pipeline {
     }
     stages {
         stage('Testes no Backend') {
-            steps {
-              dir('api') {
-                sh 'npm install'
-                sh 'npx cypress run'
-              }
-            }
+    steps {
+        dir('api') {
+            sh 'npm install'
+            sh 'npx cypress install --force'
+            sh 'chmod +x node_modules/.bin/cypress'
+            sh 'npx cypress run'
         }
+    }
+}
 
         stage('Testes no Frontend(Mobile)') {
             steps {
