@@ -72,7 +72,7 @@ Cypress.Commands.add("login", (matricula, senha) => {
 Cypress.Commands.add("deleteAgendamento", (id) => {
   return cy.api({
     method: "DELETE",
-    url: `http://localhost:3333/api/agendamentos/${id}`,
+    url: `http://rockshaver-api:3333/api/agendamentos/${id}`,
     headers: {
       Authorization: `Bearer ${Cypress.env("token")}`,
     },
@@ -83,7 +83,7 @@ Cypress.Commands.add("deleteAgendamento", (id) => {
 Cypress.Commands.add("postLembrete", (id) => {
   cy.api({
     method: "POST",
-    url: `http://localhost:3333/api/agendamentos/${id}/lembrete`,
+    url: `http://rockshaver-api:3333/api/agendamentos/${id}/lembrete`,
     headers: {
       Authorization: `Bearer ${Cypress.env("token")}`,
     },
