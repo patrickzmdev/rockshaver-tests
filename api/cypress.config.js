@@ -4,7 +4,7 @@ require("dotenv").config();
 module.exports = {
   env: {
     mongodb: {
-      uri: process.env.MONGODB_URI,
+      uri: process.env.MONGO_URI,
       database: process.env.DATABASE,
     },
   },

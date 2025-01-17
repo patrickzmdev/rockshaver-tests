@@ -8,7 +8,7 @@ describe("agendamento", () => {
       body: calendario,
     }).as("getCalendario");
 
-    cy.log("MONGODB_URI:", Cypress.env("mongodb").uri);
+    cy.log("MONGO_URI:", Cypress.env("mongodb").uri);
     cy.log("DATABASE:", Cypress.env("mongodb").database);
   });
 
